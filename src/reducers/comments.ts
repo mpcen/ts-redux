@@ -13,7 +13,6 @@ export function commentsReducer(state: Comment[] = [], action: ActionTypes) {
             ];
 
         case actionConstants.DELETE_COMMENT:
-            console.log('inside reducer', state, action) 
             return action.payload;
 
         case actionConstants.UPDATE_COMMENT:            

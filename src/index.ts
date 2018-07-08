@@ -16,7 +16,7 @@ store.dispatch(addComment('Comment 1'));
 store.dispatch(addComment('Comment 2'));
 store.dispatch(deleteComment(1));
 // store.dispatch(addComment('Comment 3'));
-// store.dispatch(updateComment(2, 'UPDATED COMMENT 2'));
+store.dispatch(updateComment(2, 'UPDATED COMMENT 2'));
 
 console.log('************************************')
 ////////////////////////////////////////////////

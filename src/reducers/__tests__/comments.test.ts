@@ -17,12 +17,34 @@ describe('comments reducer', () => {
         const currentState: Comment[] = [{ id: 1, text: 'first' }];
         const action: ActionTypes = {
             type: actionConstants.ADD_COMMENT,
-            payload: { id: 2, text: 'second' }
+            payload: { id: 2, text: 'second' } as Comment
         };
 
         expect(commentsReducer(currentState, action)).to.eql([
             { id: 1, text: 'first' },
             { id: 2, text: 'second' }
+        ]);
+    });
+
+    it('handles the UPDATE_COMMENT action type', () => {
+        const action: ActionTypes = {
+            type: actionConstants.UPDATE_COMMENT,
+            payload: [{ id: 1, text: 'modified' }]
+        };
+
+        expect(commentsReducer([], action)).to.eql([
+            { id: 1, text: 'modified' },
+        ]);
+    });
+
+    it('handles the DELETE_COMMENT action type', () => {
+        const action: ActionTypes = {
+            type: actionConstants.DELETE_COMMENT,
+            payload: [{ id: 2, text: 'second' }]
+        };
+
+        expect(commentsReducer([], action)).to.eql([
+            { id: 2, text: 'second' },
         ]);
     });
 });

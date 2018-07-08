@@ -27,9 +27,10 @@ export function addComment(text: string): ThunkResult<void> {
 
 export function deleteComment(id: number): ThunkResult<void> {
     return (dispatch: Dispatch<ActionTypes>, getState: () => State) => {
-        const filteredComments = getState().comments.filter((comment: Comment) => {
-            return comment.id !== id;
-        });
+        const filteredComments: Comment[] =
+            getState().comments.filter((comment: Comment) => {
+                return comment.id !== id;
+            });
 
         dispatch({
             type: DELETE_COMMENT,
@@ -40,13 +41,14 @@ export function deleteComment(id: number): ThunkResult<void> {
 
 export function updateComment(id: number, text: string): ThunkResult<void> {
     return (dispatch: Dispatch<ActionTypes>, getState: () => State) => {
-        const updatedList = getState().comments.map((comment: Comment) => {
-            if(comment.id === id) {
-                comment.text = text;
-            }
+        const updatedList: Comment[] =
+            getState().comments.map((comment: Comment) => {
+                if(comment.id === id) {
+                    comment.text = text;
+                }
 
-            return comment;
-        });
+                return comment;
+            });
 
         dispatch({
             type: UPDATE_COMMENT,

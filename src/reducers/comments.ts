@@ -6,14 +6,14 @@ import { Comment } from '../models/Comment';
 
 export function commentsReducer(state: Comment[] = [], action: ActionTypes) {
     switch(action.type) {
-        case actionConstants.ADD_COMMENT:
-        console.log('33333')
+        case actionConstants.ADD_COMMENT:               
             return [
                 ...state,
                 action.payload
             ];
 
-        case actionConstants.DELETE_COMMENT:            
+        case actionConstants.DELETE_COMMENT:
+            console.log('inside reducer', state, action) 
             return action.payload;
 
         case actionConstants.UPDATE_COMMENT:            

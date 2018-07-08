@@ -6,7 +6,7 @@ import createMockStore, { MockStoreCreator, MockStoreEnhanced } from 'redux-mock
 import { State } from '../../reducers';
 import { ActionTypes, commentsActions, actionConstants } from '../index';
 
-describe('comments', () => {
+describe('comments actions', () => {
     type DispatchExts = ThunkDispatch<State, undefined, ActionTypes>;
     const middlewares: Array<Middleware> = [thunk as ThunkMiddleware<State, ActionTypes>];    
     const mockStoreCreator: MockStoreCreator<State, DispatchExts> =

@@ -2,7 +2,7 @@ import { Dispatch } from 'redux';
 
 import { ActionTypes } from './types';
 import { ThunkResult } from './index';
-import { Comment } from '../models/Comment';
+import { Comment } from '../models';
 import { State } from '../reducers';
 import {
     ADD_COMMENT,

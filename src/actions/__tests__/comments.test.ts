@@ -14,7 +14,7 @@ describe('comments actions', () => {
 
     it('dispatches proper actions when adding a comment', () => {
         const store: MockStoreEnhanced<State, DispatchExts> = mockStoreCreator(
-            { count: 0, comments: [] }
+            { count: 0, comments: [], users: [] }
         );
         const expectedActions: Array<ActionTypes> = [
             { type: actionConstants.INCREMENT_COUNTER },
@@ -39,7 +39,8 @@ describe('comments actions', () => {
                 comments: [
                     { id: 1, text: 'comment 1' },
                     { id: 2, text: 'comment 2' }
-                ]
+                ],
+                users: []
             }
         );
 
@@ -59,7 +60,8 @@ describe('comments actions', () => {
         const store: MockStoreEnhanced<State, DispatchExts> = mockStoreCreator(
             {
                 count: 2,
-                comments: [{ id: 1, text: 'starting text' }]
+                comments: [{ id: 1, text: 'starting text' }],
+                users: []
             }
         );
 

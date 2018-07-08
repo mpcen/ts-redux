@@ -1,5 +1,5 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Users\vccen\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add https://github.com/DefinitelyTyped/DefinitelyTyped/pull/26732/commits/e108a347188cf629c0b8c6fd5ebfe18fa1ce39e9
+  C:\Program Files\nodejs\node.exe C:\Users\vccen\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add axios
 
 PATH: 
   C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\dotnet\;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Microsoft VS Code\bin;C:\Users\vccen\AppData\Local\Microsoft\WindowsApps;;C:\Users\vccen\AppData\Roaming\npm;C:\Program Files\Heroku\bin;C:\Program Files\Microsoft VS Code Insiders\bin;C:\Program Files\Microsoft VS Code\bin
@@ -14,17 +14,7 @@ Platform:
   win32 x64
 
 Trace: 
-  Error: https://github.com/DefinitelyTyped/DefinitelyTyped/pull/26732/commits/e108a347188cf629c0b8c6fd5ebfe18fa1ce39e9: Invalid tar header. Maybe the tar is corrupted or it needs to be gunzipped?
-      at Object.module.exports.exports.decode (C:\Users\vccen\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:76850:43)
-      at Extract.onheader [as _onparse] (C:\Users\vccen\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:145866:39)
-      at Extract.module.exports.Extract._write (C:\Users\vccen\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:145989:8)
-      at doWrite (C:\Users\vccen\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:73199:64)
-      at writeOrBuffer (C:\Users\vccen\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:73188:5)
-      at Extract.module.exports.Writable.write (C:\Users\vccen\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:73125:11)
-      at Duplexify.ondata (C:\Users\vccen\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:72273:20)
-      at Duplexify.emit (events.js:182:13)
-      at readableAddChunk (C:\Users\vccen\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:71944:18)
-      at Duplexify.module.exports.Readable.push (C:\Users\vccen\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:71903:10)
+  Error: EPERM: operation not permitted, unlink 'C:\workspace\ts-redux\node_modules\acorn-globals\node_modules\.bin'
 
 npm manifest: 
   {
@@ -42,7 +32,6 @@ npm manifest:
     "author": "",
     "license": "ISC",
     "dependencies": {
-      "chai": "^4.1.2",
       "eslint": "^5.0.1",
       "nodemon": "^1.17.5",
       "redux": "^4.0.0",
@@ -53,6 +42,7 @@ npm manifest:
       "@types/chai": "^4.1.4",
       "@types/jest": "^23.1.4",
       "@types/redux-mock-store": "^1.0.0",
+      "chai": "^4.1.2",
       "jest": "^23.3.0",
       "redux-mock-store": "^1.5.3",
       "ts-node": "^7.0.0"
